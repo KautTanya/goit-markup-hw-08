@@ -1,24 +1,55 @@
 .our-team{
+    
     background-color:#F5F4FA;
     &__list{
-        display: flex;
+        @media screen and (min-width:768px){
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+        @media screen and (min-width:1200px){
+            
+        }
+    
     }
     &__item{
-        width: 270px;
+        width: 450px;
         border-radius: 4px;
         overflow: hidden;
         background-color: #fff;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        @media screen and (min-width:768px){
+            width: 354px;
+            margin: 15px;
+        }
+        @media screen and (min-width:1200px){
+            width: 270px;
+        }
     }
     &__item:not(:last-child){
-        margin-right: 30px;
+        @media screen and (max-width:767px){
+            margin-bottom: 30px;
+        }
+        
     }
     &__info{
         padding-top: 30px;
-        padding-bottom: 30px;
-        padding-right: 32px;
-        padding-left: 32px;
+        padding-bottom: 24px;
+        padding-right: 122px;
+        padding-left: 122px;
         text-align: center;
+
+        
+        @media screen and (min-width:768px){
+            padding-right: 74px;
+            padding-left: 74px;
+        }
+        @media screen and (min-width:1200px){
+            padding-bottom: 30px;
+            padding-right: 32px;
+            padding-left: 32px;
+        }
     }
     &__name{
         margin-bottom: 10px;

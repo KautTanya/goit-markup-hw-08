@@ -1,13 +1,32 @@
 .about-us__list{
-    display: flex;
-}
-.about-us__item{
-    width: 270px;
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
 
-    &:not(:last-child){
-        margin-right: 30px;
     }
 }
+.about-us__item{
+   
+    width: 100%;
+        @media screen and (min-width:480px){
+            width: 450px;
+        }
+        @media screen and (min-width: 768px){
+            width: 354px;
+            margin: 15px;
+        }
+        @media screen and (min-width:1200px){
+            width: 270px;
+        }
+    &:not(:last-child){
+        @media screen and (max-width:767px) {
+            margin-bottom: 30px;
+        }
+    }
+   
+}
+
 
 .about-us__icon{
     display: flex;
