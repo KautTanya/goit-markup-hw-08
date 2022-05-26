@@ -1,11 +1,30 @@
 .header{
-    display: none;
+    position: relative;
     border-bottom: 1px solid #ECECEC;
 }
 .main-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+
+.header__menu{
+  
+    &.is-open{
+        display: block;
+    }
+
+    @media screen and (max-width:767px){
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+    @media screen and (min-width:768px){
+        display: flex;
+    }
 }
 .navigation{
     display: flex;
@@ -13,10 +32,16 @@
 }
 .navigation-list{
     display: flex;
-    margin-left: 92px;
-
+   
+    
     &__item:not(:last-child){
     margin-right: 50px;
+    }
+    @media screen and (min-width:768px){
+        margin-right: 84px;
+    }
+    @media screen and (min-width:1200px){
+        margin-right: 305px;
     }
 }
 .navigation-list__link {
@@ -51,13 +76,30 @@
 }
 .info-list{
     display: flex;
+    // margin-right: auto;
+    
 
     &__item:not(:last-child){
-        margin-right: 50px;
+        
+        @media screen and (max-width:1199px){
+            margin-bottom: 10px;
+        }
+        @media screen and (min-width:1200px){
+            margin-right: 50px;
+        }
+        
     }
     &__svg{
-        margin-right: 10px;
+        margin-right: 8px;
+        @media screen and (min-width:1200px){
+            margin-right: 10px;
+        }
         
+    }
+    @media screen and (max-width:1199px){
+        flex-direction: column;
+        padding-top: 21px;
+        padding-bottom: 21px;
     }
 }
 
@@ -65,11 +107,11 @@
 .info-list__link{
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  
 
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: $primary-text-color;
     fill: $primary-text-color;
@@ -83,6 +125,12 @@
     fill: $accent-color;
     
     }   
+    @media screen and (min-width:1200px){
+        font-size: 14px;
+        line-height: 1.14;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
 
 }
 
