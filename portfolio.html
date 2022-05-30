@@ -16,6 +16,7 @@
         <div class="conteiner main-nav">
             <a class="logo link" href="./index.html"><span class="logo__accent">Web</span>Studio</a>
             <div class="header__menu" data-menu>
+               <div class="burger-content">
                 <nav class="navigation">
                 
                     <ul class="navigation-list list">
@@ -23,37 +24,41 @@
                             <a class="navigation-list__link link " href="./index.html">Студия</a>
                         </li>
                         <li class="navigation-list__item">
-                            <a class="navigation-list__link link current" href="./portfolio.html">Портфолио</a>
+                            <a class="navigation-list__link link current " href="./portfolio.html">Портфолио</a>
                         </li>
                         <li class="navigation-list__item">
                             <a class="navigation-list__link link" href="">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <ul class="info-list list">
-                    <li class="info-list__item">
-                        <a class="info-list__link mail link" href="mailto:info@devstudio.com">
-                                <svg class="info-list__svg" width="16" height="12">
-                                    <use href="./images/icons.svg#envelope"></use>
-                                </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="info-list__item">
-                        <a class="info-list__link tel link" href="tel:+380961111111">
-                                <svg class="info-list__svg" width="10" height="16">
-                                    <use href="./images/icons.svg#smartphone"></use>
-                                </svg>
-                                +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-                <ul class="burger__list list">
-                    <li class="burger__item"><a class="burger__link link" href="">Instagram</a></li>
-                    <li class="burger__item"><a class="burger__link link" href="">Twitter</a></li>
-                    <li class="burger__item"><a class="burger__link link" href="">Facebook</a></li>
-                    <li class="burger__item"><a class="burger__link link" href="">LinkedIn</a></li>
-                </ul>
+                    <div class="burger-info">
+                        <ul class="info-list list">
+                            <li class="info-list__item">
+                                <a class="info-list__link mail link" href="mailto:info@devstudio.com">
+                                        <svg class="info-list__svg" width="16" height="12">
+                                            <use href="./images/icons.svg#envelope"></use>
+                                        </svg>
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                            <li class="info-list__item">
+                                <a class="info-list__link tel link" href="tel:+380961111111">
+                                        <svg class="info-list__svg" width="10" height="16">
+                                            <use href="./images/icons.svg#smartphone"></use>
+                                        </svg>
+                                        +38 096 111 11 11
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="burger__list list">
+                            <li class="burger__item"><a class="burger__link link" href="">Instagram</a></li>
+                            <li class="burger__item"><a class="burger__link link" href="">Twitter</a></li>
+                            <li class="burger__item"><a class="burger__link link" href="">Facebook</a></li>
+                            <li class="burger__item"><a class="burger__link link" href="">LinkedIn</a></li>
+                        </ul>
+                    </div>
+               </div>
+                
             </div>
             <button type="button" class="button__menu" data-menu-button aria-expanded="false" >
                 <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
@@ -99,7 +104,7 @@
 
                             </div>
                             
-                            <div class="portfolio__info">
+                            <div class="portfolio__info portfolio__one">
                                 <h2 class="portfolio__title">Технокряк</h2>
                                 <p class="portfolio__name">Веб-сайт</p>
                             </div>

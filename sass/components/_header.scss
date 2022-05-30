@@ -1,6 +1,7 @@
 .header{
     position: relative;
     border-bottom: 1px solid #ECECEC;
+    z-index: 4;
 }
 .main-nav{
  
@@ -11,10 +12,13 @@
 }
 
 .header__menu{
+    height: 100%;
      
     z-index: 2;
     &.is-open{
         display: block;
+        position: fixed;
+        top: 0;
     }
 
     @media screen and (max-width:767px){
@@ -23,15 +27,30 @@
         top: -100%;
         left: 0;
         width: 100%;
-        height: 796px;
+        height: 100%;
         background-color: #fff;
         padding-top: 76px;
         padding-left: 40px;
         padding-bottom: 48px;
     }
+    @media screen and (max-width:479px){
+        padding: 40px 15px;
+        
+    }
     @media screen and (min-width:768px){
         display: flex;
     }
+}
+.burger-content{
+
+    display: flex;
+
+    @media screen and (max-width:767px){
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
 }
 .navigation{
     display: flex;
@@ -42,11 +61,20 @@
    
  
     &__item:not(:last-child){
-    margin-right: 50px;
+        @media screen and (min-width:768px){
+            margin-right: 50px;
+        }
+        @media screen and (max-width:767px){
+            margin-bottom: 50px;
+        }
+       
+        
+  
     
     }
     @media screen and (max-width:767px){
         flex-direction: column;
+        
     }
     @media screen and (min-width:768px){
         margin-right: 84px;
@@ -56,13 +84,10 @@
     }
 }
 .navigation-list__link {
+   
     position: relative;
     display: block;
- 
    
-    padding-bottom: 32px;
-   
-
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -72,14 +97,27 @@
     &:hover,
     &:focus{
         color: $accent-color;
-    }
 
+       
+            
+        
+    }
+    &__link:not(:last-child){
+        @media screen and (max-width:767px){
+            margin-bottom: 32px;
+        }
+      
+  
+    
+    }
     @media screen and (max-width:767px){
         font-size: 40px;
         line-height: 1.18;
     }
     @media screen and (min-width:768px){
         padding-top: 32px;
+        padding-bottom: 32px;
+        
     }
     &.current{
         @media screen and (max-width:767px){
@@ -123,6 +161,9 @@
         @media screen and (min-width:1200px){
             margin-right: 10px;
         }
+        @media screen and (max-width:767px){
+            display: none;
+            }
         
     }
     @media screen and (max-width:767px){
@@ -164,7 +205,7 @@
             line-height: 1.17;
             color: $accent-color;
             margin-bottom: 32px;
-            margin-top: 170px;
+            
            
         }
     }
@@ -184,22 +225,38 @@
     }
 
 }
-.info-list__svg{
-        @media screen and (max-width:767px){
-        display: none;
-        }
 
-}
 .burger__list{
     display: flex;
     margin-top: 64px;
+    
+    @media screen and(min-width:480px){
+        margin-left: -10px;
+        margin-right: -10px;
+    }
     @media screen and (min-width:768px){
         display: none;
         }
     
 }
+.burger__item{
+    position: relative;
+    
+    
+}
 .burger__item:not(:last-child){
-    margin-right: 20px;
+    margin-right: 0px;
+    
+    
+
+    &::after{
+        content: url(../images/line.svg);
+        position: absolute;
+        top: 0;
+        right: 0;
+       
+    }
+    
 }
 .burger__link{
     color: $accent-color;
@@ -207,6 +264,12 @@
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
-}
+    @media screen and(min-width:480px){
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 
+   
+    
+}
 

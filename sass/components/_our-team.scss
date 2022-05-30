@@ -7,13 +7,13 @@
             flex-wrap: wrap;
             margin: -15px;
         }
-        @media screen and (min-width:1200px){
+        // @media screen and (min-width:1200px){
             
-        }
+        // }
     
     }
     &__item{
-        width: 450px;
+        width: 100%;
         border-radius: 4px;
         overflow: hidden;
         background-color: #fff;
@@ -36,20 +36,18 @@
     &__info{
         padding-top: 30px;
         padding-bottom: 24px;
-        padding-right: 122px;
-        padding-left: 122px;
         text-align: center;
 
         
-        @media screen and (min-width:768px){
-            padding-right: 74px;
-            padding-left: 74px;
-        }
-        @media screen and (min-width:1200px){
-            padding-bottom: 30px;
-            padding-right: 32px;
-            padding-left: 32px;
-        }
+        // @media screen and (min-width:768px){
+        //     padding-right: 74px;
+        //     padding-left: 74px;
+        // }
+        // @media screen and (min-width:1200px){
+        //     padding-bottom: 30px;
+        //     padding-right: 32px;
+        //     padding-left: 32px;
+        // }
     }
     &__name{
         margin-bottom: 10px;

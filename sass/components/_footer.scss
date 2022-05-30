@@ -4,9 +4,8 @@
     padding-bottom: 60px;
     &__conteiner{
         display: flex;
-       
-        
-        @media screen and (max-width:767px) {
+               
+        @media screen and (min-width:320px) and (max-width:767px) {
             flex-direction: column;
             align-items: center;
         }
@@ -16,18 +15,18 @@
             justify-content: space-around;
             align-items: baseline;
         }
-        @media screen and (min-width:1200px){
-            justify-content: space-between;
-        }
+   
 
     }
    
    
     &-info{
-        @media screen and (max-width:1199px){
+        @media screen and (min-width:320px) and (max-width:1199px){
             text-align: center;
         }
-        
+        @media screen and (min-width:1200px){
+            margin-right: 70px;
+        }
     }
     &__logo {
         color: $next-color;
@@ -45,7 +44,7 @@
 
 .address{
     margin-top: 20px;
-    @media screen and (max-width:1199px){
+    @media screen and (min-width:320px) and (max-width:1199px){
         text-align: center;
     }
    
@@ -71,18 +70,21 @@
 
 
 .subscription{
-    text-align: center;
-    @media screen and (max-width:767px) {
+    
+    @media screen and (min-width:320px) and (max-width:767px) {
         margin-bottom: 60px;
         margin-top: 60px;
     }
-  
+    @media screen and (min-width:320px) and (max-width:1199px){
+        text-align: center;
+    }
     &__list{
         display: flex;
     }
     &__item:not(:last-child){
         margin-right: 10px;
     }
+   
 }
 
 
@@ -99,9 +101,15 @@
         }
 }
 .send{
-    text-align: center;
+    
     @media screen and(min-width:768px) and(max-width:1200px){
         margin-top: 60px;
+    }
+    @media screen and (min-width:320px) and (max-width:1199px){
+        text-align: center;
+    }
+    @media screen and (min-width:1200px){
+        margin-left: auto;
     }
 }
 .send__form{
@@ -126,7 +134,7 @@
 }
 
 .send__input{
-    width: 450px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -136,6 +144,9 @@
     color: $next-color;
     margin-bottom: 20px;
 
+    @media screen and (min-width:480px){
+        width: 450px;
+    }
     @media screen and (min-width:1200px){
         width: 358px;
         margin-bottom: 0;

@@ -21,7 +21,7 @@
                     border: 1px solid $accent-color;
                     fill: $accent-color;
                 }
-
+             
 
                 @media screen and (min-width:480px){
                     width: 210px;
@@ -36,5 +36,8 @@
 }
 .client__item{
     margin: 15px;
+    @media screen and (min-width:320px) and (max-width:479px){
+        width: 100%;
+    }
 }
 
